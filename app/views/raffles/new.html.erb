@@ -1,0 +1,13 @@
+<% content_for :title do %>
+  Novo Raffle
+<% end %>
+
+<div class="page-header">
+  <h1>Novo Raffle</h1>
+  <%= link_to raffles_path, class: 'btn btn-outline-secondary' do %>
+    <%= icon 'fas', 'bars' %>
+    Voltar
+  <% end %>
+</div>
+
+<%= render 'form' %>
