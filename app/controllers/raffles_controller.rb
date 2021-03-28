@@ -26,7 +26,7 @@ class RafflesController < ApplicationController
     @raffle = Raffle.new(raffle_params)
 
     if @raffle.save
-      redirect_to @raffle, notice: 'Raffle was successfully created.'
+      redirect_to @raffle, notice: 'Rifa criada com sucesso.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class RafflesController < ApplicationController
   # PATCH/PUT /raffles/1
   def update
     if @raffle.update(raffle_params)
-      redirect_to @raffle, notice: 'Raffle was successfully updated.'
+      redirect_to @raffle, notice: 'Rifa atualizada com sucesso.'
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class RafflesController < ApplicationController
   # DELETE /raffles/1
   def destroy
     @raffle.destroy
-    redirect_to raffles_url, notice: 'Raffle was successfully destroyed.'
+    redirect_to raffles_url, notice: 'Rifa excluída com sucesso.'
   end
 
   private

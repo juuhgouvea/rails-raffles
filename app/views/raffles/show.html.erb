@@ -1,9 +1,9 @@
 <% content_for :title do %>
-  Detalhes de Raffle
+  Detalhes da Rifa
 <% end %>
 
 <div class="page-header">
-  <h1>Detalhes de Raffle</h1>
+  <h1>Detalhes da Rifa</h1>
   <div>
     <%= link_to edit_raffle_path(@raffle), class: 'btn btn-success' do %>
       <%= icon 'fas', 'edit' %>
@@ -17,31 +17,31 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Title:</dt>
+  <dt>Título:</dt>
   <dd><%= @raffle.title %></dd>
 
-  <dt>Description:</dt>
+  <dt>Descrição:</dt>
   <dd><%= @raffle.description %></dd>
 
-  <dt>Initial draw date:</dt>
-  <dd><%= @raffle.initial_draw_date %></dd>
+  <dt>Sorteio previsto para:</dt>
+  <dd><%= @raffle.initial_draw_date.strftime("%d/%m/%Y %H:%M") %></dd>
 
-  <dt>Start sale date:</dt>
-  <dd><%= @raffle.start_sale_date %></dd>
+  <dt>Início das vendas em:</dt>
+  <dd><%= @raffle.start_sale_date.strftime("%d/%m/%Y %H:%M") %></dd>
 
-  <dt>End sale date:</dt>
-  <dd><%= @raffle.end_sale_date %></dd>
+  <dt>Fim das vendas em:</dt>
+  <dd><%= @raffle.end_sale_date.strftime("%d/%m/%Y %H:%M") %></dd>
 
-  <dt>Draw date:</dt>
-  <dd><%= @raffle.draw_date %></dd>
+  <dt>Sorteado em:</dt>
+  <dd><%= @raffle.draw_date.strftime("%d/%m/%Y %H:%M") unless @raffle.draw_date.nil? %></dd>
 
-  <dt>Ticket price:</dt>
+  <dt>Valor do bilhete:</dt>
   <dd><%= @raffle.ticket_price %></dd>
 
-  <dt>User:</dt>
+  <dt>Usuário:</dt>
   <dd><%= @raffle.user %></dd>
 
-  <dt>Kind:</dt>
+  <dt>Tipo:</dt>
   <dd><%= @raffle.kind %></dd>
 
 </dl>

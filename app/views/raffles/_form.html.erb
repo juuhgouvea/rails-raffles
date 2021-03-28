@@ -3,18 +3,17 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :initial_draw_date %>
-    <%= f.input :start_sale_date %>
-    <%= f.input :end_sale_date %>
-    <%= f.input :draw_date %>
-    <%= f.input :ticket_price %>
-    <%= f.association :user %>
-    <%= f.association :kind %>
+    <%= f.input :title, label: 'Título' %>
+    <%= f.input :description, label: 'Descrição' %>
+    <%= f.input :initial_draw_date, label: 'Data prevista para o sorteio' %>
+    <%= f.input :start_sale_date, label: 'Data de início das vendas' %>
+    <%= f.input :end_sale_date, label: 'Data de fim das vendas' %>
+    <%= f.input :ticket_price, label: 'Valor do bilhete' %>
+    <%= f.association :user, label: 'Usuário' %>
+    <%= f.association :kind, label: 'Tipo' %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, f.object.new_record? ? 'Criar Raffle' : 'Atualizar Raffle', class: 'btn btn-primary btn-lg' %>
+    <%= f.button :submit, f.object.new_record? ? 'Criar Rifa' : 'Atualizar Rifa', class: 'btn btn-primary btn-lg' %>
   </div>
 <% end %>
