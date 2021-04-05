@@ -56,3 +56,4 @@ gem 'simple_form'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pry-rails'
+gem 'devise'
