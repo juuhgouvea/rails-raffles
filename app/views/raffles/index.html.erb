@@ -37,8 +37,8 @@
           <td><%= raffle.end_sale_date&.to_s(:br_format) %></td>
           <td><%= raffle.draw_date&.to_s(:br_format) %></td>
           <td><%= raffle.ticket_price %></td>
-          <td><%= raffle.user %></td>
-          <td><%= raffle.kind %></td>
+          <td><%= raffle.user.name %></td>
+          <td><%= raffle.kind.description %></td>
           <td>
             <%= link_to raffle, class: 'btn btn-info btn-sm' do %>
               <%= icon 'fas', 'eye', class: 'fa-fw' %>

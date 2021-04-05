@@ -24,24 +24,24 @@
   <dd><%= @raffle.description %></dd>
 
   <dt>Sorteio previsto para:</dt>
-  <dd><%= @raffle.initial_draw_date.strftime("%d/%m/%Y %H:%M") %></dd>
+  <dd><%= @raffle.initial_draw_date&.to_s(:br_format) %></dd>
 
   <dt>Início das vendas em:</dt>
-  <dd><%= @raffle.start_sale_date.strftime("%d/%m/%Y %H:%M") %></dd>
+  <dd><%= @raffle.start_sale_date&.to_s(:br_format) %></dd>
 
   <dt>Fim das vendas em:</dt>
-  <dd><%= @raffle.end_sale_date.strftime("%d/%m/%Y %H:%M") %></dd>
+  <dd><%= @raffle.end_sale_date&.to_s(:br_format) %></dd>
 
   <dt>Sorteado em:</dt>
-  <dd><%= @raffle.draw_date.strftime("%d/%m/%Y %H:%M") unless @raffle.draw_date.nil? %></dd>
+  <dd><%= @raffle.draw_date&.to_s(:br_format) %></dd>
 
   <dt>Valor do bilhete:</dt>
   <dd><%= @raffle.ticket_price %></dd>
 
   <dt>Usuário:</dt>
-  <dd><%= @raffle.user %></dd>
+  <dd><%= @raffle.user.name %></dd>
 
   <dt>Tipo:</dt>
-  <dd><%= @raffle.kind %></dd>
+  <dd><%= @raffle.kind.description %></dd>
 
 </dl>
