@@ -10,7 +10,7 @@
     <%= f.input :end_sale_date, label: 'Data de fim das vendas' %>
     <%= f.input :ticket_price, label: 'Valor do bilhete' %>
     <%= f.association :user, label: 'Usuário' %>
-    <%= f.association :kind, label: 'Tipo' %>
+    <%= f.association :kind, collection: Kind.all.map { |k| [k.description, k.id] }, label: 'Tipo' %>
   </div>
 
   <div class="form-actions">
