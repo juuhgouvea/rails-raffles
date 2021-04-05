@@ -1,5 +1,3 @@
 class Kind < ApplicationRecord
-  def to_s
-    description
-  end
+  has_many :raffles
 end

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  def to_s
-    name
-  end
+  has_many :raffles
+  has_many :tickets
+  has_many :prizes, through: :tickets
 end
