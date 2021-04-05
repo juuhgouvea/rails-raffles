@@ -32,10 +32,10 @@
         <tr>
           <td><%= raffle.title %></td>
           <td><%= raffle.description %></td>
-          <td><%= raffle.initial_draw_date.strftime("%d/%m/%Y %H:%M") %></td>
-          <td><%= raffle.start_sale_date.strftime("%d/%m/%Y %H:%M") %></td>
-          <td><%= raffle.end_sale_date.strftime("%d/%m/%Y %H:%M") %></td>
-          <td><%= raffle.draw_date.strftime("%d/%m/%Y %H:%M") unless raffle.draw_date.nil? %></td>
+          <td><%= raffle.initial_draw_date&.to_s(:br_format) %></td>
+          <td><%= raffle.start_sale_date&.to_s(:br_format) %></td>
+          <td><%= raffle.end_sale_date&.to_s(:br_format) %></td>
+          <td><%= raffle.draw_date&.to_s(:br_format) %></td>
           <td><%= raffle.ticket_price %></td>
           <td><%= raffle.user %></td>
           <td><%= raffle.kind %></td>
